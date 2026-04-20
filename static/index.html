@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Embedding Visualizer</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text to Vector Embedding</h1>
+        
+        <div class="input-section">
+            <label for="textInput1">Enter text 1:</label>
+            <textarea id="textInput1" placeholder="Type the first text here..." rows="4"></textarea>
+            <label for="textInput2">Enter text 2:</label>
+            <textarea id="textInput2" placeholder="Type the second text here..." rows="4"></textarea>
+            <button id="embedButton">Get Embeddings and Similarity</button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            Loading...
+        </div>
+
+        <div id="result" class="result-section hidden">
+            <h2>Embedding Vectors</h2>
+            <div>
+                <h3>Vector 1</h3>
+                <div id="vectorDisplay1" class="vector-display"></div>
+            </div>
+            <div>
+                <h3>Vector 2</h3>
+                <div id="vectorDisplay2" class="vector-display"></div>
+            </div>
+            <p id="vectorInfo" class="vector-info"></p>
+            <p id="similarityInfo" class="vector-info"></p>
+            <button id="copyButton">Copy Vectors</button>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
